@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factura;
+package negocio;
 
 /**
  *
@@ -15,12 +15,8 @@ public class Principal {
      */
     public static void main(String[] args) {
         
-        Cliente unCliente = new Cliente();
-        unCliente.setNombre("Manuel");
-        unCliente.setApellido("Perez");
-        unCliente.setCalle("Mitre");
-        unCliente.setAltura(980);
-        unCliente.setDni(27986325);
+        Cliente unCliente = new Cliente("Manuel", "Perez", "Mitre", 900, 27986325);
+    
         
         Pais unPais = new Pais();
         unPais.setNombre("Argentina");
@@ -39,6 +35,7 @@ public class Principal {
         
         FormaCobro unFormaCobro = new FormaCobro();
         unFormaCobro.setNombre("Visa");
+        unFormaCobro.setNombre("Efectivo");
         
         Item cocaCola = new Item();
         cocaCola.setNombre("Coca cola");
@@ -64,7 +61,7 @@ public class Principal {
         Factura unaFactura = new Factura();
         unaFactura.setCliente(unCliente);
         unaFactura.setNumero(2354);
-        unaFactura.setFormaCobro(unFormaCobro);
+        unaFactura.agregarFormaCobro(unFormaCobro);
         unaFactura.agregarItem(unItemFacturaPepsi);
         unaFactura.agregarItem(unItemFacturaCoca);
     

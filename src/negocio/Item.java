@@ -3,31 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factura;
+package negocio;
 
-/**
- *
- * @author alumno
- */
-public class Provincia {
+public class Item {
     private String nombre;
-    private Pais pais;
-    
+    private Double precio;
+
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombre(String pnombre) {
+        nombre = pnombre;
     }
 
-    public Pais getPais() {
-        return pais;
+    public Double getPrecio() {
+        return precio;
     }
 
-    public void setPais(Pais pais) {
-        this.pais = pais;
+    public void setPrecio(Double pprecio) {
+        this.precio = pprecio;
+        
     }
-    
     
 }

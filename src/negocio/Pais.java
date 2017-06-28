@@ -3,24 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factura;
+package negocio;
 
 /**
  *
  * @author alumno
  */
-public class FormaCobro {
+public class Pais {
     private String nombre;
-
-    public  String getNombre() {
+ 
+    public String getNombre() {
         return nombre;
     }
 
-    public  void setNombre(String pnombre) {
-        nombre = pnombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    
-    
-    
 }

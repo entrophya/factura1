@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factura;
+package negocio;
 
 import java.util.ArrayList; 
 import java.util.Date;
@@ -19,7 +19,7 @@ import java.util.Set;
 public class Factura {
 
     private ArrayList<ItemFactura> itemFactura = new ArrayList();    
-    private FormaCobro formaCobro;
+    private ArrayList<FormaCobro> formaCobro = new ArrayList();
     private Cliente cliente;
     private Date fecha;
     private Integer numero;
@@ -30,17 +30,15 @@ public class Factura {
     public void agregarItem(ItemFactura pItemFactura){
        itemFactura.add(pItemFactura);
     }
-    
-    
 
-    public FormaCobro getFormaCobro() {
+    public ArrayList<FormaCobro> getFormaCobro() {
         return formaCobro;
     }
 
-    public void setFormaCobro(FormaCobro formaCobro) {
-        this.formaCobro = formaCobro;
+    public void agregarFormaCobro(FormaCobro pformaCobro){
+       formaCobro.add(pformaCobro);
     }
-
+    
     public Cliente getCliente() {
         return cliente;
     }
@@ -63,5 +61,9 @@ public class Factura {
 
     public void setNumero(Integer numero) {
         this.numero = numero;
+    }
+
+    void setFormaCobro(FormaCobro unFormaCobro) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

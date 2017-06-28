@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factura;
+package negocio;
 
 /**
  *
@@ -13,53 +13,37 @@ public class Cliente {
     private String nombre, apellido, calle;
     private Integer dni, altura;
     private Localidad localidad;
-    
-    public String getNombre() {
-        return nombre;
+
+    public Cliente(String nombre, String apellido, String calle, Integer dni, Integer altura) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.calle = calle;
+        this.dni = dni;
+        this.altura = altura;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getNombre() {
+        return nombre;
     }
 
     public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public String getCalle() {
         return calle;
-    }
-
-    public void setCalle(String calle) {
-        this.calle = calle;
     }
 
     public Integer getDni() {
         return dni;
     }
 
-    public void setDni(Integer dni) {
-        this.dni = dni;
-    }
-
     public Integer getAltura() {
         return altura;
     }
 
-    public void setAltura(Integer altura) {
-        this.altura = altura;
-    }
-
     public Localidad getLocalidad() {
         return localidad;
-    }
-
-    public void setLocalidad(Localidad localidad) {
-        this.localidad = localidad;
     }
     
 }
